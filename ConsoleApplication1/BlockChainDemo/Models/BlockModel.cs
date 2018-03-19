@@ -10,8 +10,8 @@ namespace BlockChainDemo
     class Block
     {
         private int PreviousHash { get; set; }
-        private int CurrentHash { get; set; }
-        List<Transaction> Transactions;
+        private int BlockHash { get; set; }
+        List<Transaction> Transactions { get; set; };
         
         
         public Block(int previousHash, List<Transaction> transactions)
@@ -20,16 +20,16 @@ namespace BlockChainDemo
             Transactions = transactions;
 
             Object[] BlockData = new Object[2] { PreviousHash, Transactions.GetHashCode() };
-            CurrentHash = BlockData.GetHashCode();
+            BlockHash = BlockData.GetHashCode();
         }
 
         public int GetPreviousHash()
         {
             return PreviousHash;
         }
-        public int GetCurrentHash()
+        public int GetBlockHash()
         {
-            return CurrentHash;
+            return BlockHash;
         }
     }
 }

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\BlockModel.cs" />
+    <Compile Include="Models\MinerModel.cs" />
     <Compile Include="Models\TransactionModel.cs" />
     <Compile Include="Models\WalletModel.cs" />
     <Compile Include="Program.cs" />
